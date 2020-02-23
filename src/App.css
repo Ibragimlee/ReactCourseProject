@@ -1,0 +1,100 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+  background-image: url('../src/assets/sky-space-milky-way-stars-110854.jpg');
+  background-size: cover;
+  min-height: 100vh;
+}
+
+
+.app-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-gap: 60px;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  padding: 0 6vw;
+}
+
+header{
+  background-color: red;
+}
+
+header > img{
+  width: 150px;
+  height: 100px;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-gap: 60px;
+}
+
+
+aside{
+  display: grid;
+  grid-column: 1 / 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+aside > nav{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px 40px;
+}
+
+aside > nav > a{
+  display: block;
+  font-family: 'Fira Code';
+  font-size: 20px;
+  font-weight: 500;
+  padding: 16px 0;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-out;
+  position: relative;
+  width: max-content;
+}
+
+aside > nav > a:before{
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 0.2s ease-out;
+}
+
+aside > nav > a:hover{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+aside > nav > a:hover:before{
+  width: 100%;
+}
+
+article{
+  background-color: yellow;
+}
+
+footer{
+
+background-color: black;
+}
