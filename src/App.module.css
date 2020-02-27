@@ -1,0 +1,51 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+  /* background-image: url('assets/banner.jpg'); */
+  background: #8e9eab;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  background-size: cover;
+  min-height: 100vh;
+}
+
+
+.app_wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 3fr 0.5fr;
+  grid-gap: 60px;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  padding: 0 6vw;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-gap: 30px;
+  grid-area: main;
+  grid-template-areas: 
+  "aside content";
+}
+
+
+aside{
+  display: grid;
+  grid-column: 1 / 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  grid-area: aside;
+}
+
+.app_wrapper_content{
+  grid-area: content;
+}

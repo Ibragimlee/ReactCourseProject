@@ -1,0 +1,49 @@
+.dialogs{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  grid-gap: 50px;
+  height: 100%;
+}
+
+.dialog_items{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  height: 100%;
+}
+
+.dialog > a{
+  display: block;
+  font-family: 'Fira Code';
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 20px;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s ease-out;
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s ease-out;
+  border-radius: 5px;
+}
+
+.dialog:not(:nth-last-child(1)){
+  margin-bottom: 20px;
+}
+
+.dialog > a.active{
+  color: black;
+}
+
+.message_items{
+
+}
+
+.message{
+
+}

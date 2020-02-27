@@ -1,0 +1,16 @@
+header{
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  grid-area: header;
+}
+
+header > a{
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px;
+  display: block;
+}
+
+header > a > img{
+
+}

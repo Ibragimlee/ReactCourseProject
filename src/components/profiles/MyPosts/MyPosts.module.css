@@ -1,0 +1,53 @@
+.top_header{
+  font-family: 'Fira Code';
+  font-size: 24px;
+  font-weight: 500;
+  color: #1d1c1c75;
+  margin-bottom: 20px;
+}
+
+.mypost_container{
+  padding: 20px;
+}
+
+
+.posts{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.post_add_block{
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.post_add_block > textarea{
+  border-radius: 5px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none;
+  resize: none;
+  height: 150px;
+  overflow: hidden;
+  padding: 20px;
+  font-family: 'Fira Code';
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.post_add_block > button{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 14px;
+  text-align: center;
+  background-color: rgba(255, 255, 0, 0.5);
+  border-radius: 5px;
+  margin-top: 10px;
+}

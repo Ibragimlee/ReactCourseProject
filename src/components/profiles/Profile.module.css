@@ -1,0 +1,16 @@
+.profile_article{
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.profile_top{
+  width: 100%;
+  overflow: hidden;
+}
+
+.article_bottom{
+
+}
