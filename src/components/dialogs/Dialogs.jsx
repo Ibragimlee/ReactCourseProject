@@ -5,24 +5,20 @@ import Message from './Message/Message';
 
 const Dialogs = (props)=>{
 
-  let dialogsData =[
-    {id: 1, name: 'Sabir'}, 
-    {id: 2, name: 'Adil'},
-    {id: 3, name: 'Lala'},
-    {id: 4, name: 'Sarxan'},
-    {id: 5, name: 'Vuqar'}
-  ]
+  let state = props.dialogsPage;
 
-  let messagesData =[
-    {id: 1, message: 'here could be your message 1'}, 
-    {id: 2, message: 'here could be your message 2'},
-    {id: 3, message: 'here could be your message 3'},
-    {id: 4, message: 'here could be your message 4'},
-    {id: 5, message: 'here could be your message 5'}
-  ]
+  let showDialogItems = state.dialogsData.map((data)=> <Dialog_Item name={data.name} key={data.id} id={data.id} />);
+  let showMessages = state.messagesData.map(mes => <Message message={mes.message} key={mes.id} />);
+  let newMessageBody = state.newMessageBody;
 
-  let showDialogItems = dialogsData.map((data)=> <Dialog_Item name={data.name} id={data.id} />);
-  let showMessages = messagesData.map(mes => <Message message={mes.message} />);
+  let onSendMessageClick = () =>{
+    props.sendMessage();
+  }
+
+  let onNewMessageChanged = (e) =>{
+    let body = e.target.value;
+    props.updateNewMessageBody(body);
+  }
 
   return(
     <div className={classes.dialogs}>
@@ -30,7 +26,13 @@ const Dialogs = (props)=>{
         {showDialogItems}
       </div>
       <div className={classes.message_items}>
-        {showMessages}
+        <div>{showMessages}</div>
+        <div>
+          <div><textarea value={newMessageBody} 
+                          placeholder="Enter your message"
+                          onChange={onNewMessageChanged}></textarea></div>
+          <div><button onClick={onSendMessageClick}>Send</button></div>
+        </div>
       </div>
     </div>
   )

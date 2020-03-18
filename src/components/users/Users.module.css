@@ -1,0 +1,68 @@
+.user_card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.user_card:not(:nth-last-child(1)) {
+  margin-bottom: 20px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left > img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.left > button {
+  align-items: center;
+  border-radius: 10px;
+  padding: 8px 20px;
+  border: 0;
+  outline: 0;
+  transition: 0.3s ease-out;
+}
+
+.follow {
+  background-color: green;
+}
+
+.unfollow {
+  background-color: red;
+}
+
+.right {
+  margin-left: 40px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+}
+
+span {
+  display: block;
+  position: relative;
+  padding: 0 5px;
+}
+
+.selectedPage {
+  font-weight: 700;
+  font-size: 18px;
+  color: blue;
+}
