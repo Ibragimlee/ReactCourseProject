@@ -1,16 +1,32 @@
-header{
+header {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
 }
 
-header > a{
+header > a {
   border-radius: 5px;
   overflow: hidden;
   padding: 20px;
   display: block;
 }
 
-header > a > img{
+header > a > img {
+}
 
+.login_block {
+}
+
+.login_block > a {
+  font-family: Fira Code;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: yellow;
+  color: #000;
+  border-radius: 5px;
 }

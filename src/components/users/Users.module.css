@@ -18,7 +18,7 @@
   justify-content: center;
 }
 
-.left > img {
+.to_profile_link > img {
   width: 120px;
   height: 120px;
   margin-bottom: 10px;
@@ -53,6 +53,12 @@
   margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
+}
+
+.pagination > .middlePagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 span {
